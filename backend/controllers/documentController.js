@@ -32,7 +32,7 @@ export const uploadDocument = async (req, res, next) => {
     }
 
     // Construct the URL for the uploaded file
-    const baseUrl = `${req.protocol}://${req.get("host")}`;
+    const baseUrl = `https://${req.get("host")}`;
     const fileUrl = `${baseUrl}/uploads/documents/${req.file.filename}`;
 
     // Create document record
